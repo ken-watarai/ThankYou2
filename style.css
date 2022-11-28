@@ -26,17 +26,45 @@ body {
 }
 
 .logo {
-    width: 220px;
-    height: 220px;
+    /* position: relative; */
+    position: fixed;
+    /* top: 50%;
+    left: 50%; */
+    width: 260px;
+    height: 260px;
+    /* transform: translate(-50%, -50%); */
     display: flex;
     justify-content: center;
     align-items: center;
 }
 .main_logo img {
-    width: 100%;
-    height: 100%;
+    width: 200px;
+    height: 200px;
     border: solid 2px #000;
     border-radius: 50%;
+}
+.text {
+    position: absolute;
+    top:0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    animation: rotateText 10s linear infinite;
+}
+@keyframes rotateText {
+    0% {
+        transform: rotate(360deg);
+    }
+    100% {
+        transform: rotate(0deg);
+    }
+}
+.text span {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    font-size: 1.2em;
+    transform-origin: 0 130px;
 }
 
 .background {
@@ -76,13 +104,13 @@ body {
 .circle.left {
     margin-left: 60px;
     left: 0;
-    background-color: blue;
+    background-color: rgba(0, 0, 255);
     transform: translate(-50%, -50%);
 }
 .circle.right {
     margin-right: 60px;
     right: 0;
-    background-color: palevioletred;
+    background-color: rgba(216, 112, 147);
     transform: translate(50%, -50%);
 }
 .circle p {
@@ -99,7 +127,7 @@ body {
     transition: 0.3s;
 }
 .msg_left {
-    background-color: #66f;
+    background-color: rgba(102, 102, 255, 0.9);
     left: -100%;
 }
 .appear {
@@ -107,7 +135,7 @@ body {
 }
 
 .msg_right {
-    background-color: pink;
+    background-color: rgba(255, 192, 203, 0.9);
     right: -100%;
 }
 .appear_r {
@@ -135,7 +163,7 @@ body {
 
 .personal_msg_card {
     position: absolute;
-    top: 50%;
+    top: 45%;
     left: 50%;
     width: 80%;
     transform: translatex(-50%);
@@ -143,6 +171,12 @@ body {
 .personal_msg_card .person {
     text-align: center;
     font: 0.8em;
+}
+.personal_msg {
+    padding: 10px;
+    box-shadow: 0 0 5px 0 rgba(0, 0, 0, .5);
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(5px);
 }
 
 .msg .circle {
@@ -181,9 +215,9 @@ body {
 
 
 /* second */
-#second {
+/* #second { */
+.outer {
     position: relative;
-    background-color: rgba(68, 151, 68, 0.7);
 }
 
 .second_background {
@@ -200,34 +234,45 @@ body {
 	text-shadow: 0 0 0.2em rgba(0,0,0,1);
 }
 
-#second .personal_msg_card {
+.outer .personal_msg_card {
     color: #FFF;
 }
-#second .personal_msg {
+.outer .personal_msg {
     width: 50vw;
     margin: auto;
 }
 
-#second .scroll {
+.outer .scroll {
     top: 80%;
     left: 50%;
     transform: translatex(-50%);
     color: #FFF;
 }
-#second .arrow {
+.outer .arrow {
     top: 89%;
     left: 50%;
     transform: translatex(-50%) rotate(45deg);
 }
+#second {
+    background-color: rgba(68, 151, 68, 0.7);
+}
+#third {
+    background-color: rgba(12, 25, 166, 0.7);
+}
+#third .personal_msg {
+    text-align: center;
+}
 
 #last {
     background-color: rgba(0, 0, 0, 0.9);
+    position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
+    font-size: 0.8em;
 }
 #last .roll {
-    width: 80vw;
+    width: 70vw;
     color: #FFF;
 }
 #last .roll p {
