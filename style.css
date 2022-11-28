@@ -2,6 +2,7 @@ body {
     margin: 0;
     padding: 0;
     background: repeating-conic-gradient(transparent,transparent 10deg, #ddd 10deg 20deg);
+    font-family: sans-serif;
 }
 
 .container {
@@ -182,7 +183,7 @@ body {
 /* second */
 #second {
     position: relative;
-    background-color: #494;
+    background-color: rgba(68, 151, 68, 0.7);
 }
 
 .second_background {
@@ -220,7 +221,7 @@ body {
 }
 
 #last {
-    background-color: #000;
+    background-color: rgba(0, 0, 0, 0.9);
     display: flex;
     justify-content: center;
     align-items: center;
