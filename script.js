@@ -17,3 +17,9 @@ function OnButtonClick21() {
   target_r.classList.remove("appear_r");
 }
 
+
+const text = document.querySelector(".text p");
+text.innerHTML = text.innerText.split("").map(
+  (char, i) => 
+  `<span style="transform:rotate(${i * 9}deg)">${char}</span>`
+).join("")
