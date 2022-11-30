@@ -184,6 +184,17 @@ body {
     backdrop-filter: blur(5px);
 }
 
+#second .personal_msg_card {
+    top: 30%;
+    width: 100%;
+}
+#second .personal_msg_card .personal_msg{
+    width: 65%;
+}
+#third .personal_msg_card {
+    top: 40%;
+}
+
 .msg .circle {
     width: 30px;
     height: 30px;
